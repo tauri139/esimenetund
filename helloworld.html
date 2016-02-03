@@ -7,12 +7,28 @@
   <body>
     Eesnimi <input type="text" id="firstname"><br>
     Perenimi <input type="text" id="lastname"><br>
-    <input type="submit" value="Tervita">
+    <input type="submit" value="Tervita" onclick="welcome()">
 
     <div id="output"></div>
 
     <script>
-      
+      var first_name;
+      var last_name;
+
+      function welcome(){
+
+        //console.log('töötab');
+        //console.error('töötab');
+
+        first_name = document.getElementById('firstname').value;
+        last_name = document.getElementById('lastname').value;
+
+        console.log(first_name + ' ' + last_name);
+
+        document.getElementById('output').innerHTML =
+        '<strong>Tere </strong>' + first_name + ' ' + last_name;
+
+      }
     </script>
 
 
